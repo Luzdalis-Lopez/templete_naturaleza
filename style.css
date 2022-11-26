@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{ 
+    margin: 0%;
+}
+
+.wrapper2 , .wrapper3{
+    display: flex;
+
+}
+
+.wrapper2{
+    margin: 80px 10px;
+}
+
+.wrapper1 {
+    display: flex;
+    justify-content: space-around;
+    max-width: calc(10000rem / 16);
+    margin: auto;
+}
+
+.inwrapper1{
+    padding: 20px;
+    margin: 80px 10px;
+    width: calc(260rem / 16);
+    max-width: calc(300rem / 16);
+}
+
+.inwrapper2_C1, .inwrapper2_C2 {
+    width: 100%;
+    padding: 30px;
+}
+
+.inwrapper2_C3{
+    padding: 30px;
+}
+
+.art_coluna1e2{
+    display: flex;
+    width: 100%;
+}
+
+.inwrapper3_C1, .inwrapper3_C2{
+    padding: 40px;
+    margin: 10px;
+}
+
+.inwrapper3_C1{
+    width: 60%;
+}
+
+.inwrapper3_C2{
+    width: 40%;
+}
+
+.marron,aside{
+    background-color:#37201A;
+    color: #7A503E;
+}
+
+a{
+    color: #7A503E;
+}
+
+li{
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.pastel{
+    color: #C27159;
+}
+
+aside{
+    background-color: #251611;
+}
+
+footer{
+    background-color: #180E0C;
+    color: #7A503E;
+    padding: 20px;
+    align-self: center;
+    text-align: center
+}
+
+.pequena{
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px 10px 0;
+}
+
+.media{
+    width: 100%;
+}
+
+.imagem_pez{
+    width: 100%;
+}
+
+#top{
+    width: 100%;
+    height: 25rem;
+    background-image: url(img/muejr_jardin.jpg);
+    background-position: center 10%;
+    background-size: cover;    
+}
+
+#menu{
+    display: flex;
+    background-color: #180E0C;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+#menu div{
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    padding: 25px;
+}
+
+#menu a:hover{
+    text-decoration:none;
+    background: rgb(74, 150, 87);
+    border-radius: 0.2em;
+    
+}
+
+h1{
+    font-size: 45px;
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+#menu nav a{
+    display: inline-block;
+    color: white;
+    padding: 0.2em 1em;
+    text-decoration: none;
+    display: none;
+}
+
+#menu nav span{
+    display: none;
+}
+
+/* Celular */
+@media screen and (max-width: 767px){ 
+    #menu nav span{
+    /* Mostramos o botão do menu para o celular */
+        display: inline-block;
+    }
+
+    h1{
+        font-size: 20pt;
+    }
+
+    #top {
+        height: 10rem;
+    }
+    .wrapper1, .wrapper2, .wrapper3{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #menu{
+        border: 1px solid #707070;
+    }
+
+    /* trocos na section marron de 2 colunas */
+    .wrapper3 > .inwrapper3_C1 h2, .wrapper3 > .inwrapper3_C2 h2{
+        font-size: 13pt;
+    }
+    .wrapper3 > .inwrapper3_C1 p, .wrapper3 > .inwrapper3_C2 a{
+        font-size: 8pt;
+    }
+
+    .inwrapper3_C1, .inwrapper3_C2{
+        width: 100%;
+        
+    }
+
+    /* trocos na section marron de 3 colunas */
+    .wrapper2 > .inwrapper2_C1 h2, .wrapper2 > .inwrapper2_C2 h2, .wrapper2 > .inwrapper2_C3 h2{
+        font-size: 21pt;
+    }
+    .wrapper2 > .inwrapper2_C1 p, .wrapper2 > .inwrapper2_C2 p, .wrapper2 > .inwrapper2_C3 p{
+        font-size: 13pt;
+    }
+
+    /* trocos na section primeira */
+    .inwrapper1 h2{
+        font-size: 13pt;
+        padding: 5px;
+    }
+    .inwrapper1 p{
+        font-size: 10pt;
+        padding: 5px;
+    }
+    .inwrapper1{
+        padding: 10px;
+        margin: 50px 0px;
+        width: calc(260rem / 26);
+    }
+    .media{
+        margin: 10px, 0px;
+    }
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){ 
+    #menu nav span{
+        /* Mostramos o botão do menu para o celular */
+        display: inline-block;
+    }
+    #top {
+        height: 25rem;
+    }
+    .wrapper2, .wrapper3{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1024px) {
+    #menu nav a{
+        /* Mostramos o menú para Desktop */
+        display: inline-block;
+        color: white;
+        padding: 0.2em 1em;
+        text-decoration: none;
+    }
+    #menu nav span{
+        /* Se oculta o botão do menu para o celular */
+        display: none;
+    }
+    .wrapper1, .wrapper2, .wrapper3 {
+        flex-wrap: nowrap;
+    }   
+}
